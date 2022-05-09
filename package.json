@@ -1,0 +1,46 @@
+{
+  "name": "feargreedindex",
+  "displayName": "Bitcoin Fear Greed Index",
+  "description": "Bitcoin Fear and Greed Index",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.66.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "icons": {
+      "coin-btc": {
+        "description": "Bitcoin icon",
+        "default": {
+          "fontPath": "./fonts/icons.woff",
+          "fontCharacter": "\\E667"
+        }
+      }
+    }
+  },
+  "main": "./lib/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint . --ext .ts,.tsx",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@types/vscode": "^1.66.0",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.15.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4",
+    "vsce": "^2.7.0"
+  },
+  "publisher": "vhtml",
+  "repository": "https://github.com/vhtml/Fear-Greed-Index"
+}
